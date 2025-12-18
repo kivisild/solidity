@@ -1,9 +1,9 @@
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
 export default buildModule("CounterModule", (m) => {
-  const counter = m.contract("Counter");
+  const smartContract = m.contract("MySmartContract");
 
-  m.call(counter, "incBy", [5n]);
+  m.call(smartContract, "incBy", [5n]);
 
-  return { counter };
+  return { smartContract };
 });
